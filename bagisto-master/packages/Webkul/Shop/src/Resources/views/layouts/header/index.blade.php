@@ -20,6 +20,19 @@
                     </a>
                 </li>
             </ul>
+            <!-- -->
+            <ul class="logo-container">
+                <li>
+                    <a href="{{ route('shop.home.index') }}">
+                        @if ($logo = core()->getCurrentChannel()->logo_url)
+                            <img class="logo" src="{{ $logo }}" />
+                        @else
+                            <img class="logo" src="{{ bagisto_asset('images/logo.svg') }}" />
+                        @endif
+                    </a>
+                </li>
+            </ul>
+            <!-- -->
 
             <ul class="search-container">
                 <li class="search-group">
@@ -42,11 +55,14 @@
                             </button>
                         </div>
                     </form>
+
                 </li>
             </ul>
+
         </div>
 
         <div class="right-content">
+
 
             <span class="search-box"><span class="icon icon-search" id="search"></span></span>
 
@@ -73,6 +89,10 @@
                             <span class="name">{{ __('shop::app.customer.compare.text') }}</span> 
                             (<span id="compare-items-count"></span>)
                         </a>
+
+                    <!--  -->
+                    <p> test</p>
+                    <!--  -->
                     </li>
                 @endif
 
